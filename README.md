@@ -1,2 +1,2 @@
-# learning
-Programming learning questions.
+# 概要
+プログラミングの課題を配置しています。
