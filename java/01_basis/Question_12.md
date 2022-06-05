@@ -11,17 +11,45 @@
 |Person|Person|-|-|コンストラクタ|
 ||Person|String|-|コンストラクタ|
 ||printName|-|void|氏名フィールドを出力する|
-4. ```Personクラス```のプログラムは下記をベースに作成してください。コンストラクタが不足しているため、必要に応じて追加してください。
+4. ```Personクラス```のプログラムは下記をベースに作成してください。プログラムの修正は不可とします。
 ```java
+/**
+ * java基礎 Question12 Personクラス
+ * @author Your name
+ */
 class Person {
-    private String name;
+	private String name; // 氏名
 
-    public Person() {
-        this.name = "ダミー";
-    }
-    public void printName(){
-        System.out.println("私の名前は " + this.name + " です");
-    }
+	/**
+	 * コンストラクタ
+	 */
+	public Person() {
+		this.name = "ダミー";
+	}
+
+	/**
+	 * コンストラクタ
+	 * @param name 氏名
+	 */
+	public Person(String name) {
+		this.name = name;
+	}
+
+	/**
+	 * 氏名取得
+	 * @return String 氏名
+	 */
+	public String getName() {
+		return name;
+	}
+
+	/**
+	 * 氏名設定
+	 * @param name 氏名
+	 */
+	public void setName(String name) {
+		this.name = name;
+	}
 }
 ```
 5. キーボードから入力された値が```1～2以外```の場合、```1～2の範囲で入力してください```と出力してください。

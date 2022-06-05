@@ -16,27 +16,45 @@
 ||flow|-|void|引き算結果⇒足し算結果の順で出力処理を呼び出す|
 4. ```CalculateSuper```のプログラムは下記を使用してください。プログラムの修正は不可とします。
 ```java
+/**
+ * java基礎 Question13 CalculateSuperクラス
+ * @author Your name
+ */
 class CalculateSuper {
-    protected int num1;
-    protected int num2;
+	protected int num1; // 整数1
+	protected int num2; // 整数2
 
-    protected CalculateSuper(int num1, int num2) {
-        this.num1 = num1;
-        this.num2 = num2;
-    }
+	/**
+	 * コンストラクタ
+	 * @param num1 整数1
+	 * @param num2 整数2
+	 */
+	protected CalculateSuper(int num1, int num2) {
+		this.num1 = num1;
+		this.num2 = num2;
+	}
 
-    protected void flow(){
-        sum();
-        sub();
-    }
+	/**
+	 * 足し算結果⇒引き算結果の順で出力処理を呼び出し
+	 */
+	protected void flow() {
+		sum();
+		subtraction();
+	}
 
-    protected void sum() {
-        System.out.println(num1 + "と" + num2 + "足すと" + (num1 + num2));
-    }
+	/**
+	 * 足し算結果を出力
+	 */
+	protected void sum() {
+		System.out.println(num1 + " と " + num2 + " の足し算結果の値は " + (num1 + num2) + " です");
+	}
 
-    protected void sub() {
-        System.out.println(num1 + "と" + num2 + "引くと" + (num1 - num2));
-    }
+	/**
+	 * 引き算結果を出力
+	 */
+	protected void subtraction() {
+		System.out.println(num1 + " と " + num2 + " の引き算結果の値は " + (num1 - num2) + " です");
+	}
 }
 ```
 5. キーボードから入力された値が```1～2以外```の場合、```1～2の範囲で入力してください```と出力してください。

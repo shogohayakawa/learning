@@ -13,9 +13,26 @@
 ||division|int, int|int|引数の掛け算結果を2で割った結果を返却する|
 3. ```Calculate```のプログラムは下記を使用してください。プログラムの修正は不可とします。
 ```java
-interface Calculate {
-    int multiplication(int num1, int num2);
-    int division(int num1, int num2);
+/**
+ * java基礎 Question14 Calculateインターフェース
+ * @author Your name
+ */
+public interface Calculate {
+	/**
+	 * 掛け算処理
+	 * @param num1 整数1
+	 * @param num2 整数2
+	 * @return 掛け算結果
+	 */
+	int multiplication(int num1, int num2);
+
+	/**
+	 * 割り算処理
+	 * @param num1 整数1
+	 * @param num2 整数2
+	 * @return 割り算結果
+	 */
+	int division(int num1, int num2);
 }
 ```
 4. キーボードから入力された値が整数以外の場合、```整数以外の値が入力されました```と出力してください。
