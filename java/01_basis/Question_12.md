@@ -10,7 +10,8 @@
 |Question10|main|String[]|void|メインメソッド|
 |Person|Person|-|-|コンストラクタ|
 ||Person|String|-|コンストラクタ|
-||printName|-|void|氏名フィールドを出力する|
+||getName|-|String|氏名取得|
+||setName|String|void|氏名設定|
 4. ```Personクラス```のプログラムは以下を使用してください。プログラムの修正は不可とします。
 ```java
 /**
