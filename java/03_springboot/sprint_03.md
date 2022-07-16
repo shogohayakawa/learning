@@ -25,7 +25,7 @@
 ||updated_at|DATETIME|-|NULLABLE|-|更新日|
 
 ## ルーティング定義
-|機能|HTTPメソッド|URL|コントローラ|メソッド|備考|
+|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|
 |タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報の一覧を表示する|
 
