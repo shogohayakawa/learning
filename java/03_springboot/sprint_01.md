@@ -14,12 +14,12 @@
 |エディタ|Eclipse|
 
 ## ルーティング定義
-|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|テスト画面表示|GET|/test|TestController|test|テスト画面を表示する|
+|新規|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|★|テスト画面表示|GET|/test|TestController|test|テスト画面を表示する|
 
 ## ファイル構成
-|概要|クラス名|メソッド名|引数|戻り値|備考|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|Controller|TestController.java|test|Model|String|test画面のリクエスト受付<br>ブラウザ表示情報をViewへ渡す|
-|View|test.html|-|-|-|test画面|
+|新規|MVC|クラス名|メソッド名|引数|戻り値|備考|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|★|Controller|TestController.java|test|Model|String|文字列「Hello World」をViewへ渡す|
+|★|View|test.html|-|-|-|テスト画面|

@@ -24,12 +24,12 @@
 ||updated_at|DATETIME|-|NULLABLE|-|更新日|
 
 ## ルーティング定義
-|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|テスト画面表示|GET|/test|TestController|test|テスト画面を表示する|
+|新規|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|-|テスト画面表示|GET|/test|TestController|test|テスト画面を表示する|
 
 ## ファイル構成
-|ファイル分類|クラス名|メソッド名|引数|戻り値|備考|
-|:---:|:---:|:---:|:---:|:---:|:---:|
-|Controller|TestController.java|test|Model|String|test画面のリクエスト受付<br>userテーブルよりユーザ名及びメールアドレスを取得<br>ブラウザ表示情報をViewへ渡す|
-|View|test.html|-|-|-|test画面|
+|新規|MVC|クラス名|メソッド名|引数|戻り値|備考|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|-|Controller|TestController.java|test|Model|String|指定したusersテーブルのレコードをViewへ渡す|
+|-|View|test.html|-|-|-|テスト画面|
