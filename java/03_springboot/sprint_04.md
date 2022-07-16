@@ -33,6 +33,7 @@
 |新規|MVC|クラス名|メソッド名|引数|戻り値|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |-|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す|
+|★|||show|int, Model|String|選択されたboardsテーブルのレコードをViewへ渡す|
 |-|Model|BoardService.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
 |★|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する|
 |-||BoardServiceImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
