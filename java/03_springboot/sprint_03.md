@@ -33,8 +33,8 @@
 |新規|MVC|クラス名|メソッド名|引数|戻り値|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |★|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す|
-|★|Model|BoardService.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
-|★||BoardServiceImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
+|★|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
+|★||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
 |★||BoardDao.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得する|
 |★||BoardDaoImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを「更新日/降順」で全件取得する|
 |★||Board.java|-|-|-|boardsテーブルのEntityクラス<br>フィールド変数、コンストラクタ、getter・setter定義する|

@@ -34,9 +34,9 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |-|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す|
 |★|||show|int, Model|String|選択されたboardsテーブルのレコードをViewへ渡す|
-|-|Model|BoardService.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
+|-|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
 |★|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する|
-|-||BoardServiceImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
+|-||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
 |★|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する|
 |-||BoardDao.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得する|
 |★|||findById|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得する|
