@@ -1,4 +1,4 @@
-# Bootstrap実装
+# Bootstrapの実装
 
 ## 開発要件
 
