@@ -6,7 +6,7 @@
 
 |クラス名<br>インターフェース名|メソッド名|引数|戻り値|概要|
 |:---:|:---:|:---:|:---:|:---:|
-|Question12|main|String[]|void|メインメソッド|
+|Question14|main|String[]|void|メインメソッド|
 |Calculate<br>（インターフェース）|multiplication|int, int|int|抽象メソッド|
 ||division|int, int|int|抽象メソッド|
 |CalculateImpl<br>（インターフェース実装クラス）|multiplication|int, int|int|引数の掛け算結果を返却する|

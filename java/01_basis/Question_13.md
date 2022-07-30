@@ -7,7 +7,7 @@
 
 |クラス名|メソッド名|引数|戻り値|概要|
 |:---:|:---:|:---:|:---:|:---:|
-|Question11|main|String[]|void|メインメソッド|
+|Question13|main|String[]|void|メインメソッド|
 |CalculateSuper<br>（親クラス）|CalculateSuper|int, int|-|コンストラクタ|
 ||flow|-|void|足し算結果⇒引き算結果の順で出力処理を呼び出す|
 ||sum|-|void|足し算結果を出力する|

@@ -7,7 +7,7 @@
 
 |クラス名|メソッド名|引数|戻り値|概要|
 |:---:|:---:|:---:|:---:|:---:|
-|Question10|main|String[]|void|メインメソッド|
+|Question12|main|String[]|void|メインメソッド|
 |Person|Person|-|-|コンストラクタ|
 ||Person|String|-|コンストラクタ|
 ||getName|-|String|氏名取得|
