@@ -7,3 +7,5 @@ springbootの構造や、MVCモデルを学習するのに最適なコースで�
 springbootを使用して、ブラウザに`Hello World`が表示されるよう実装します。
 ## sprint_02　DBデータの表示
 springbootからDBに接続し、登録されたデータがブラウザに表示されるよう実装します。
+## sprint_03　モデルの作成
+モデル（`Service`、`Repository`、`Entity`）を使用し、登録されたデータがブラウザに表示されるよう実装します。
