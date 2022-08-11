@@ -29,17 +29,17 @@
 ## ルーティング定義
 |対象|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|★|タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報の一覧を表示する|
+|★|タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報の一覧を表示する。|
 
 ## ファイル構成
 |対象|MVC|クラス名|メソッド名|引数|戻り値|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|★|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す|
-|★|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
-|★||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する|
-|★||BoardDao.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得する|
-|★||BoardDaoImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを「更新日/降順」で全件取得する|
-|★||Board.java|-|-|-|boardsテーブルのEntityクラス<br>フィールド変数、コンストラクタ、getter・setter定義する|
+|★|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す。|
+|★|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
+|★||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
+|★||BoardDao.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得する。|
+|★||BoardDaoImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを「更新日/降順」で全件取得する。|
+|★||Board.java|-|-|-|boardsテーブルのEntityクラス<br>フィールド変数、コンストラクタ、getter・setter定義する。|
 |★|View|index.html|-|-|-|タイムライン画面|
 
 ## 画面定義
@@ -52,9 +52,9 @@
 
 |対象|画面項目1|画面項目2|種別|備考|
 |:---:|:---:|:---:|:---:|:---:|
-|★|ヘッダ|ページタイトル|テキスト出力|「Simple Board」と表示する<br>クリックするとタイムライン画面へ遷移する|
-|★||「つぶやき登録」ボタン|ボタン|クリックするとつぶやき登録画面へ遷移する<br>※現段階では実装不要|
-|★|画面タイトル|-|テキスト出力|「タイムライン」と表示する|
+|★|ヘッダ|ページタイトル|テキスト出力|「Simple Board」と表示する。<br>クリックするとタイムライン画面へ遷移する。|
+|★||「つぶやき登録」ボタン|ボタン|クリックするとつぶやき登録画面へ遷移する。<br>※現段階では実装不要|
+|★|画面タイトル|-|テキスト出力|「タイムライン」と表示する。|
 |★|つぶやき一覧ヘッダ部|タイトル|テキスト出力|-|
 |★||つぶやき|テキスト出力|-|
 |★||更新日|テキスト出力|-|
