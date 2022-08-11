@@ -1,7 +1,7 @@
 # モデルの作成
 
 ## 開発要件
-1. `sprint_02`と同じ開発要件で、モデルからユーザ情報が取得されるよう改修してください。
+1. [sprint_02](/java/03_springboot/01_introduction/sprint_02.md)と同じ開発要件で、モデルからユーザ情報が取得されるよう改修してください。
 2. モデルは以下の構造となるよう作成してください。
 
     - Service
@@ -47,4 +47,3 @@
 - 画面イメージ
 
 ![01](/java/images/03_springboot/01_introduction/sprint_03/01.PNG)
-※）`sprint_02`と同様です
