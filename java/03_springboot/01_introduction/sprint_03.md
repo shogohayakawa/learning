@@ -1,10 +1,12 @@
-# DBデータの表示
+# モデルの作成
 
 ## 開発要件
-1. DBからユーザ情報を全て取得し、ブラウザに表示してください。
-2. URLは以下の`ルーティング定義`通りとなるよう設定してください。
-3. DB及び`users`テーブルを作成し、事前にデータを投入してください。DB名は任意とします。
-4. 画面は以下の`画面定義`を参考に作成してください。
+1. `sprint_02`と同じ開発要件で、モデルからユーザ情報が取得されるよう改修してください。
+2. モデルは以下の構造となるよう作成してください。
+
+    - Service
+    - Repository（dao）
+    - Entity
 
 ## 使用ツール
 |概要|ツール|
@@ -33,10 +35,16 @@
 |対象|MVC|クラス名|メソッド名|引数|戻り値|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |★|Controller|TestController.java|test|Model|String|全てのusersテーブルのレコードをViewへ渡す。|
+|★|Model|UserService.java<br>（インターフェース）|getAll|-|List\<User>|usersテーブルのレコードを全件取得するようdaoに指示する。|
+|★||UserServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<User>|usersテーブルのレコードを全件取得するようdaoに指示する。|
+|★||UserDao.java<br>（インターフェース）|findAll|-|List\<User>|usersテーブルのレコードを全件取得する。|
+|★||UserDaoImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<User>|usersテーブルのレコードを全件取得する。|
+|★||User.java|-|-|-|usersテーブルのEntityクラス<br>フィールド変数、コンストラクタ、getter・setterを定義する。|
 |★|View|test.html|-|-|-|テスト画面|
 
 ## 画面定義
 ### テスト画面
 - 画面イメージ
 
-![01](/java/images/03_springboot/01_introduction/sprint_02/01.PNG)
+![01](/java/images/03_springboot/01_introduction/sprint_03/01.PNG)
+※）`sprint_02`と同様です
