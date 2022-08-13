@@ -39,8 +39,8 @@
 ## ルーティング定義
 |対象|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|-|タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報の一覧を表示する。|
-|-|つぶやき詳細画面表示|GET|/board/show/{id}|BoardController|show|つぶやき情報の詳細を表示する。|
+|-|タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報を全件取得し「タイムライン画面」を表示する。|
+|-|つぶやき詳細画面表示|GET|/board/show/{id}|BoardController|show|つぶやき情報を1件取得し「つぶやき詳細画面」を表示する。|
 |★|つぶやき登録画面表示|GET|/board/create|BoardController|create|「つぶやき登録画面」を表示する。|
 |★|つぶやき登録確認画面表示|POST|/board/create/confirm|BoardController|createConfirm|「つぶやき登録画面」で入力されたつぶやき情報を「つぶやき登録確認画面」へ表示する。|
 |★|つぶやき登録画面へ戻る|POST|/board/create|BoardController|createGoBack|入力されたつぶやき情報を引き継いで「つぶやき登録画面」を表示する。|
@@ -49,12 +49,12 @@
 ## ファイル構成
 |対象|MVC|クラス名|メソッド名|引数|戻り値|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|★|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す。|
-|-|||show|int, Model|String|選択されたboardsテーブルのレコードをViewへ渡す。|
+|★|Controller|BoardController.java|index|Model, String|String|全てのboardsテーブルのレコードを「タイムライン画面」のViewへ渡す。|
+|-|||show|int, Model|String|選択されたboardsテーブルのレコードを「つぶやき詳細画面」のViewへ渡す。|
 |★|||create|Model|String|「つぶやき登録画面」のViewを呼び出す。|
 |★|||createConfirm|BoardForm, BindingResult, Model|String|「つぶやき登録画面」で入力されたデータをバリデーションチェックする。<br>「つぶやき登録画面」で入力されたデータを「つぶやき登録確認画面」のViewへ渡す。|
-|★|||createGoBack|BoardForm, Model|String|「つぶやき登録確認画面」に設定されたデータをViewへ渡す。|
-|★|||store|BoardForm, BindingResult, Model, RedirectAttributes|String|「つぶやき登録確認画面」に設定されたデータをバリデーションチェックする。<br>つぶやき登録確認画面に設定されたデータをboardsテーブルに登録する。<br>「タイムライン画面」へリダイレクトする。|
+|★|||createGoBack|BoardForm, Model|String|「つぶやき登録確認画面」に設定されたデータを「つぶやき登録画面」のViewへ渡す。|
+|★|||store|BoardForm, BindingResult, Model, RedirectAttributes|String|「つぶやき登録確認画面」に設定されたデータをバリデーションチェックする。<br>「つぶやき登録確認画面」に設定されたデータをboardsテーブルに登録する。<br>「タイムライン画面」へリダイレクトする。|
 |-|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
 |-|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する。|
 |★|||save|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|

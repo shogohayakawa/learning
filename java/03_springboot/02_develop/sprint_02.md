@@ -28,14 +28,14 @@
 ## ルーティング定義
 |対象|機能|HTTPメソッド|URL|コントローラ名|メソッド名|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|-|タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報の一覧を表示する。|
-|★|つぶやき詳細画面表示|GET|/board/show/{id}|BoardController|show|つぶやき情報の詳細を表示する。|
+|-|タイムライン画面表示|GET|/board/index|BoardController|index|つぶやき情報を全件取得し「タイムライン画面」を表示する。|
+|★|つぶやき詳細画面表示|GET|/board/show/{id}|BoardController|show|つぶやき情報を1件取得し「つぶやき詳細画面」を表示する。|
 
 ## ファイル構成
 |対象|MVC|クラス名|メソッド名|引数|戻り値|備考|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|-|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードをViewへ渡す。|
-|★|||show|int, Model|String|選択されたboardsテーブルのレコードをViewへ渡す。|
+|-|Controller|BoardController.java|index|Model|String|全てのboardsテーブルのレコードを「タイムライン画面」のViewへ渡す。|
+|★|||show|int, Model|String|選択されたboardsテーブルのレコードを「つぶやき詳細画面」のViewへ渡す。|
 |-|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
 |★|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する。|
 |-||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
