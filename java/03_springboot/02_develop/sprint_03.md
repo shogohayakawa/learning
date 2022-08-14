@@ -57,16 +57,16 @@
 |★|||store|BoardForm, BindingResult, Model, RedirectAttributes|String|「つぶやき登録確認画面」に設定されたデータをバリデーションチェックする。<br>「つぶやき登録確認画面」に設定されたデータをboardsテーブルに登録する。<br>「タイムライン画面」へリダイレクトする。|
 |-|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
 |-|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する。|
-|★|||save|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
+|★|||save|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
 |-||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
 |-|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する。|
-|★|||save|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
+|★|||save|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
 |-||BoardDao.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得する。|
 |-|||findById|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得する。|
-|★|||insert|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録する。|
+|★|||insert|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録する。|
 |-||BoardDaoImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを「更新日/降順」で全件取得する。|
 |-|||findById|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得する。|
-|★|||insert|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録する。|
+|★|||insert|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録する。|
 |★||BoardForm.java|-|-|-|boardsモデルのformクラス<br>フィールド変数、コンストラクタ、getter・setterを定義する。<br>入力項目のバリデーションチェック内容は以下の「バリデーション」参照。|
 |-||Board.java|-|-|-|boardsテーブルのEntityクラス<br>フィールド変数、コンストラクタ、getter・setterを定義する。|
 |★|View|index.html|-|-|-|タイムライン画面|
