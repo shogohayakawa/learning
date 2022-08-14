@@ -59,52 +59,72 @@
 |-|||createConfirm|BoardForm, BindingResult, Model|String|「つぶやき登録画面」で入力されたデータをバリデーションチェックする。<br>「つぶやき登録画面」で入力されたデータを「つぶやき登録確認画面」のViewへ渡す。|
 |-|||createGoBack|BoardForm, Model|String|「つぶやき登録確認画面」に設定されたデータを「つぶやき登録画面」のViewへ渡す。|
 |-|||store|BoardForm, BindingResult, Model, RedirectAttributes|String|「つぶやき登録確認画面」に設定されたデータをバリデーションチェックする。<br>「つぶやき登録確認画面」に設定されたデータをboardsテーブルに登録する。<br>「タイムライン画面」へリダイレクトする。|
-|★|||edit|int, Model|String|つぶやき編集画面のViewを呼び出す。|
+|★|||edit|int, Model|String|「つぶやき編集画面」のViewを呼び出す。|
 |★|||editConfirm|BoardForm, BindingResult, int, Model|String|「つぶやき編集画面」で入力されたデータをバリデーションチェックする。<br>「つぶやき編集画面」で入力されたデータを「つぶやき編集確認画面」のViewへ渡す。|
 |★|||editGoBack|BoardForm, int, Model|String|「つぶやき編集確認画面」に設定されたデータを「つぶやき編集画面」のViewへ渡す。|
-|★|||update|BoardForm, BindingResult, int, Model, RedirectAttributes|String|「つぶやき編集確認画面」に設定されたデータをバリデーションチェックする。<br>つぶやき編集確認画面に設定されたデータをboardsテーブルへ更新する。<br>「タイムライン画面」へリダイレクトする。|
+|★|||update|BoardForm, BindingResult, int, Model, RedirectAttributes|String|「つぶやき編集確認画面」に設定されたデータをバリデーションチェックする。<br>「つぶやき編集確認画面」に設定されたデータをboardsテーブルへ更新する。<br>「タイムライン画面」へリダイレクトする。|
 |-|Model|BoardService.java<br>（インターフェース）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
 |-|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する。|
-|-|||save|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
-|★|||update|void|Board|Boardエンティティのデータをboardsテーブルへ1件更新するようdaoに指示する。|
+|-|||save|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
+|★|||update|Board|void|Boardエンティティのデータをboardsテーブルへ1件更新するようdaoに指示する。|
 |-||BoardServiceImpl.java<br>（インターフェース実装クラス）|getAll|-|List\<Board>|boardsテーブルのレコードを全件取得するようdaoに指示する。|
 |-|||getBoard|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得するようdaoに指示する。|
-|-|||save|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
-|★|||update|void|Board|Boardエンティティのデータをboardsテーブルへ1件更新するようdaoに指示する。|
+|-|||save|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録するようdaoに指示する。|
+|★|||update|Board|void|Boardエンティティのデータをboardsテーブルへ1件更新するようdaoに指示する。|
 |-||BoardDao.java<br>（インターフェース）|findAll|-|List\<Board>|boardsテーブルのレコードを全件取得する。|
 |-|||findById|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得する。|
-|-|||insert|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録する。|
-|★|||update|void|Board|Boardエンティティのデータをboardsテーブルへ1件更新する。|
+|-|||insert|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録する。|
+|★|||update|Board|void|Boardエンティティのデータをboardsテーブルへ1件更新する。|
 |-||BoardDaoImpl.java<br>（インターフェース実装クラス）|findAll|-|List\<Board>|boardsテーブルのレコードを「更新日/降順」で全件取得する。|
 |-|||findById|int|Board|つぶやきIDを元にboardsテーブルのレコードを1件取得する。|
-|-|||insert|void|Board|Boardエンティティのデータをboardsテーブルへ1件登録する。|
-|★|||update|void|Board|Boardエンティティのデータをboardsテーブルへ1件更新する。|
+|-|||insert|Board|void|Boardエンティティのデータをboardsテーブルへ1件登録する。|
+|★|||update|Board|void|Boardエンティティのデータをboardsテーブルへ1件更新する。|
 |-||BoardForm.java|-|-|-|boardsモデルのformクラス<br>フィールド変数、コンストラクタ、getter・setterを定義する。<br>入力項目のバリデーションチェック内容は以下の「バリデーション」参照。|
 |-||Board.java|-|-|-|boardsテーブルのEntityクラス<br>フィールド変数、コンストラクタ、getter・setterを定義する。|
 |-|View|index.html|-|-|-|タイムライン画面|
-|-||show.html|-|-|-|つぶやき詳細画面|
+|★||show.html|-|-|-|つぶやき詳細画面|
 |-||create.html|-|-|-|つぶやき登録画面|
 |-||create_confirm.html|-|-|-|つぶやき登録確認画面|
 |★||edit.html|-|-|-|つぶやき編集画面|
 |★||edit_confirm.html|-|-|-|つぶやき編集確認画面|
 
 ## 画面定義
-### つぶやき編集画面
-- 画面イメージ（編集ボタンから遷移）
+### つぶやき詳細画面
+- 画面イメージ
 
 ![01](/java/images/03_springboot/02_develop/sprint_04/01.PNG)
 
-- 画面イメージ（つぶやき編集確認画面から遷移）
+- 画面項目
+
+|対象|画面項目1|画面項目2|種別|備考|
+|:---:|:---:|:---:|:---:|:---:|
+|-|ヘッダ|ページタイトル|テキスト出力|「Simple Board」と表示する。<br>クリックすると「タイムライン画面」へ遷移する。|
+|-||「つぶやき登録」ボタン|ボタン|クリックすると「つぶやき登録画面」へ遷移する。<br>※現段階では実装不要|
+|-|画面タイトル|-|テキスト出力|「つぶやき詳細」と表示する。|
+|-|つぶやき詳細表示部|タイトルヘッダ|テキスト出力|「タイトル」と表示する。|
+|-||タイトル|テキストボックス|「タイムライン画面」で選択されたレコードのタイトルを表示する。<br>画面から編集できないよう「非活性」とする。|
+|-||つぶやきヘッダ|テキスト出力|「つぶやき」と表示する。|
+|-||つぶやき|テキストエリア|「タイムライン画面」で選択されたレコードのつぶやきを表示する。<br>画面から編集できないよう「非活性」とする。|
+|-|「一覧へ戻る」ボタン|-|ボタン|クリックすると「タイムライン画面」へ遷移する。|
+|★|「編集」ボタン|-|ボタン|クリックすると「つぶやき編集画面」へ遷移する。|
+|-|「削除」ボタン|-|ボタン|クリックすると「つぶやき削除ダイアログ」を表示する。<br>※現段階では実装不要|
+
+### つぶやき編集画面
+- 画面イメージ（編集ボタンから遷移）
 
 ![02](/java/images/03_springboot/02_develop/sprint_04/02.PNG)
 
-- 画面イメージ（必須チェックエラー）
+- 画面イメージ（つぶやき編集確認画面から遷移）
 
 ![03](/java/images/03_springboot/02_develop/sprint_04/03.PNG)
 
-- 画面イメージ（桁数チェックエラー）
+- 画面イメージ（必須チェックエラー）
 
 ![04](/java/images/03_springboot/02_develop/sprint_04/04.PNG)
+
+- 画面イメージ（桁数チェックエラー）
+
+![05](/java/images/03_springboot/02_develop/sprint_04/05.PNG)
 
 - 画面項目
 
@@ -127,11 +147,11 @@
 ### つぶやき編集確認画面
 - 画面イメージ（初期表示）
 
-![05](/java/images/03_springboot/02_develop/sprint_04/05.PNG)
+![06](/java/images/03_springboot/02_develop/sprint_04/06.PNG)
 
 - 画面イメージ（つぶやき更新確認ダイアログ）
 
-![06](/java/images/03_springboot/02_develop/sprint_04/06.PNG)
+![07](/java/images/03_springboot/02_develop/sprint_04/07.PNG)
 
 - 画面項目
 
@@ -158,7 +178,7 @@
 ### タイムライン画面
 - 画面イメージ（フラッシュメッセージ）
 
-![07](/java/images/03_springboot/02_develop/sprint_04/07.PNG)
+![08](/java/images/03_springboot/02_develop/sprint_04/08.PNG)
 
 - 画面項目
 
@@ -205,4 +225,4 @@
 |対象|画面|表示契機|フラッシュメッセージ|
 |:---:|:---:|:---:|:---:|
 |-|タイムライン画面|つぶやき登録成功時|つぶやきの登録に成功しました|
-|★|タイムライン画面|つぶやき更新成功時|つぶやきの更新に成功しました|
+|★||つぶやき更新成功時|つぶやきの更新に成功しました|
