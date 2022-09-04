@@ -51,7 +51,7 @@
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |★|Controller|BoardController.java|index|Model, String|String|全てのboardsテーブルのレコードを「タイムライン画面」のViewへ渡す。|
 |-|||show|int, Model|String|選択されたboardsテーブルのレコードを「つぶやき詳細画面」のViewへ渡す。|
-|★|||create|Model|String|「つぶやき登録画面」のViewを呼び出す。|
+|★|||create|BoardForm, Model|String|「つぶやき登録画面」のViewを呼び出す。|
 |★|||createConfirm|BoardForm, BindingResult, Model|String|「つぶやき登録画面」で入力されたデータをバリデーションチェックする。<br>「つぶやき登録画面」で入力されたデータを「つぶやき登録確認画面」のViewへ渡す。|
 |★|||createGoBack|BoardForm, Model|String|「つぶやき登録確認画面」に設定されたデータを「つぶやき登録画面」のViewへ渡す。|
 |★|||store|BoardForm, BindingResult, Model, RedirectAttributes|String|「つぶやき登録確認画面」に設定されたデータをバリデーションチェックする。<br>「つぶやき登録確認画面」に設定されたデータをboardsテーブルに登録する。<br>「タイムライン画面」へリダイレクトする。|
