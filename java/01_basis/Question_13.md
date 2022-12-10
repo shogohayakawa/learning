@@ -20,7 +20,7 @@
  * java基礎 Question13 CalculateSuperクラス
  * @author Your name
  */
-class CalculateSuper {
+public class CalculateSuper {
 	protected int num1; // 整数1
 	protected int num2; // 整数2
 

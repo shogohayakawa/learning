@@ -18,7 +18,7 @@
  * java基礎 Question12 Personクラス
  * @author Your name
  */
-class Person {
+public class Person {
 	private String name; // 氏名
 
 	/**
